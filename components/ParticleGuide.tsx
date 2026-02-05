@@ -2,6 +2,12 @@
 
 import { useState } from 'react';
 
+import {
+  useStickyHeaderHeight,
+  calculateStickyTop,
+  getNavbarHeight,
+} from '@/hooks/useStickyHeader';
+
 interface ParticleExample {
   japanese: string;
   romaji: string;
@@ -309,6 +315,7 @@ interface AccordionSectionProps {
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
+  sectionHeaderHeight: number;
 }
 
 function AccordionSection({
@@ -317,12 +324,13 @@ function AccordionSection({
   isOpen,
   onToggle,
   children,
+  sectionHeaderHeight,
 }: AccordionSectionProps) {
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-700">
       <div
         className="sticky z-20 bg-white dark:bg-zinc-900"
-        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height))' }}
+        style={{ top: calculateStickyTop(sectionHeaderHeight) }}
       >
         <button
           onClick={onToggle}
@@ -401,6 +409,7 @@ export function ParticleGuide() {
   const [openSections, setOpenSections] = useState<Record<string, boolean>>({
     wa: true,
   });
+  const [sectionHeaderRef, sectionHeaderHeight] = useStickyHeaderHeight();
 
   const toggleSection = (section: string) => {
     setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
@@ -409,8 +418,9 @@ export function ParticleGuide() {
   return (
     <div className="rounded-xl bg-white shadow-sm dark:bg-zinc-900">
       <div
+        ref={sectionHeaderRef}
         className="sticky z-30 rounded-t-xl bg-white px-4 pt-4 dark:bg-zinc-900"
-        style={{ top: 'var(--navbar-height)' }}
+        style={{ top: getNavbarHeight() }}
       >
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           じょし (Particles)
@@ -427,6 +437,7 @@ export function ParticleGuide() {
             subtitle={`(${particle.romaji}) - ${particle.name}`}
             isOpen={openSections[particle.romaji] || false}
             onToggle={() => toggleSection(particle.romaji)}
+            sectionHeaderHeight={sectionHeaderHeight}
           >
             <ParticleCard particle={particle} />
           </AccordionSection>

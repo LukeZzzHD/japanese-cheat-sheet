@@ -3,6 +3,11 @@
 import { useState } from "react";
 
 import { useIsLargeScreen } from "@/hooks/useMediaQuery";
+import {
+  useStickyHeaderHeight,
+  calculateStickyTop,
+  getNavbarHeight,
+} from "@/hooks/useStickyHeader";
 
 interface Expression {
   japanese: string;
@@ -458,6 +463,7 @@ interface AccordionSectionProps {
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
+  sectionHeaderHeight: number;
 }
 
 function AccordionSection({
@@ -466,12 +472,13 @@ function AccordionSection({
   isOpen,
   onToggle,
   children,
+  sectionHeaderHeight,
 }: AccordionSectionProps) {
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-700">
       <div
         className="sticky z-20 bg-white dark:bg-zinc-900"
-        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height))' }}
+        style={{ top: calculateStickyTop(sectionHeaderHeight) }}
       >
         <button
           onClick={onToggle}
@@ -537,6 +544,7 @@ export function GrammarSection() {
   const [manualOverrides, setManualOverrides] = useState<
     Record<string, boolean>
   >({});
+  const [sectionHeaderRef, sectionHeaderHeight] = useStickyHeaderHeight();
 
   const defaultState: Record<string, boolean> = {};
   expressionsData.forEach((category) => {
@@ -557,8 +565,9 @@ export function GrammarSection() {
   return (
     <div className="rounded-xl bg-white shadow-sm dark:bg-zinc-900">
       <div
+        ref={sectionHeaderRef}
         className="sticky z-30 rounded-t-xl bg-white px-4 pt-4 dark:bg-zinc-900"
-        style={{ top: 'var(--navbar-height)' }}
+        style={{ top: getNavbarHeight() }}
       >
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           ひょうげん (Common Expressions)
@@ -576,6 +585,7 @@ export function GrammarSection() {
             subtitle={`(${category.titleJapanese})`}
             isOpen={openSections[category.id] || false}
             onToggle={() => toggleSection(category.id)}
+            sectionHeaderHeight={sectionHeaderHeight}
           >
             {category.description && (
               <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">

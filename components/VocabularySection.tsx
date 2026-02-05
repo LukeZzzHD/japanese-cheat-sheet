@@ -1,8 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { useIsLargeScreen } from "@/hooks/useMediaQuery";
+import {
+  useStickyHeaderHeight,
+  calculateStickyTop,
+  getNavbarHeight,
+} from "@/hooks/useStickyHeader";
 
 interface VocabWord {
   japanese: string;
@@ -862,6 +867,8 @@ interface AccordionSectionProps {
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
+  sectionHeaderHeight: number;
+  onSubsectionHeightChange?: (height: number) => void;
 }
 
 function AccordionSection({
@@ -870,18 +877,30 @@ function AccordionSection({
   isOpen,
   onToggle,
   children,
+  sectionHeaderHeight,
+  onSubsectionHeightChange,
 }: AccordionSectionProps) {
+  const [headerRef, headerHeight] = useStickyHeaderHeight();
+
+  // Report height changes to parent via useEffect to avoid render-phase side effects
+  useEffect(() => {
+    if (onSubsectionHeightChange && headerHeight > 0) {
+      onSubsectionHeightChange(headerHeight);
+    }
+  }, [headerHeight, onSubsectionHeightChange]);
+
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-700">
       <div
+        ref={headerRef}
         className="sticky z-20 bg-white dark:bg-zinc-900"
-        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height))' }}
+        style={{ top: calculateStickyTop(sectionHeaderHeight) }}
       >
         <button
           onClick={onToggle}
           className="flex w-full items-center justify-between py-3 text-left"
         >
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-x-2">
             <span className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
               {title}
             </span>
@@ -890,7 +909,7 @@ function AccordionSection({
             </span>
           </div>
           <svg
-            className={`h-5 w-5 text-zinc-500 transition-transform ${
+            className={`h-5 w-5 shrink-0 text-zinc-500 transition-transform ${
               isOpen ? "rotate-180" : ""
             }`}
             fill="none"
@@ -906,7 +925,13 @@ function AccordionSection({
           </svg>
         </button>
       </div>
-      {isOpen && <div className="pb-4">{children}</div>}
+      {isOpen && (
+        <div className="pb-4">
+          {typeof children === "function"
+            ? (children as (subsectionHeight: number) => React.ReactNode)(headerHeight)
+            : children}
+        </div>
+      )}
     </div>
   );
 }
@@ -939,15 +964,19 @@ function VocabCard({ word }: { word: VocabWord }) {
 function SubcategorySection({
   title,
   words,
+  sectionHeaderHeight,
+  subsectionHeaderHeight,
 }: {
   title: string;
   words: VocabWord[];
+  sectionHeaderHeight: number;
+  subsectionHeaderHeight: number;
 }) {
   return (
     <div className="mt-3">
       <div
         className="sticky z-10 bg-white py-2 dark:bg-zinc-900"
-        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height) + var(--subsection-header-height))' }}
+        style={{ top: calculateStickyTop(sectionHeaderHeight, subsectionHeaderHeight) }}
       >
         <h4 className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
           {title}
@@ -967,6 +996,8 @@ export function VocabularySection() {
   const [manualOverrides, setManualOverrides] = useState<
     Record<string, boolean>
   >({});
+  const [sectionHeaderRef, sectionHeaderHeight] = useStickyHeaderHeight();
+  const [subsectionHeights, setSubsectionHeights] = useState<Record<string, number>>({});
 
   const defaultState: Record<string, boolean> = {};
   vocabularyData.forEach((category) => {
@@ -987,8 +1018,9 @@ export function VocabularySection() {
   return (
     <div className="rounded-xl bg-white shadow-sm dark:bg-zinc-900">
       <div
+        ref={sectionHeaderRef}
         className="sticky z-30 rounded-t-xl bg-white px-4 pt-4 dark:bg-zinc-900"
-        style={{ top: 'var(--navbar-height)' }}
+        style={{ top: getNavbarHeight() }}
       >
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           たんご (Vocabulary)
@@ -1005,6 +1037,12 @@ export function VocabularySection() {
             subtitle={`(${category.titleJapanese})`}
             isOpen={openSections[category.id] || false}
             onToggle={() => toggleSection(category.id)}
+            sectionHeaderHeight={sectionHeaderHeight}
+            onSubsectionHeightChange={(height) => {
+              if (subsectionHeights[category.id] !== height) {
+                setSubsectionHeights((prev) => ({ ...prev, [category.id]: height }));
+              }
+            }}
           >
             {category.words.length > 0 && (
               <div className="grid gap-2 lg:grid-cols-2">
@@ -1019,6 +1057,8 @@ export function VocabularySection() {
                 key={index}
                 title={sub.title}
                 words={sub.words}
+                sectionHeaderHeight={sectionHeaderHeight}
+                subsectionHeaderHeight={subsectionHeights[category.id] || 0}
               />
             ))}
           </AccordionSection>

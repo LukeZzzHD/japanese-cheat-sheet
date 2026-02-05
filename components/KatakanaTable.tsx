@@ -3,6 +3,11 @@
 import { useState } from "react";
 
 import { useIsLargeScreen } from "@/hooks/useMediaQuery";
+import {
+  useStickyHeaderHeight,
+  calculateStickyTop,
+  getNavbarHeight,
+} from "@/hooks/useStickyHeader";
 
 interface KanaCell {
   kana: string;
@@ -248,6 +253,7 @@ interface AccordionSectionProps {
   isOpen: boolean;
   onToggle: () => void;
   children: React.ReactNode;
+  sectionHeaderHeight: number;
 }
 
 function AccordionSection({
@@ -255,12 +261,13 @@ function AccordionSection({
   isOpen,
   onToggle,
   children,
+  sectionHeaderHeight,
 }: AccordionSectionProps) {
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-700">
       <div
         className="sticky z-20 bg-white dark:bg-zinc-900"
-        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height))' }}
+        style={{ top: calculateStickyTop(sectionHeaderHeight) }}
       >
         <button
           onClick={onToggle}
@@ -296,6 +303,7 @@ export function KatakanaTable() {
   const [manualOverrides, setManualOverrides] = useState<
     Record<string, boolean>
   >({});
+  const [sectionHeaderRef, sectionHeaderHeight] = useStickyHeaderHeight();
 
   const defaultState: Record<string, boolean> = isLargeScreen
     ? {
@@ -325,8 +333,9 @@ export function KatakanaTable() {
   return (
     <div className="rounded-xl bg-white shadow-sm dark:bg-zinc-900">
       <div
+        ref={sectionHeaderRef}
         className="sticky z-30 rounded-t-xl bg-white px-4 pt-4 pb-2 dark:bg-zinc-900"
-        style={{ top: 'var(--navbar-height)' }}
+        style={{ top: getNavbarHeight() }}
       >
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           カタカナ (Katakana)
@@ -337,6 +346,7 @@ export function KatakanaTable() {
         title="Basic (ア - ン)"
         isOpen={openSections.basic}
         onToggle={() => toggleSection("basic")}
+        sectionHeaderHeight={sectionHeaderHeight}
       >
         <KanaGrid data={basicKatakana} columns={5} />
       </AccordionSection>
@@ -345,6 +355,7 @@ export function KatakanaTable() {
         title="Dakuten (゛) - Voiced"
         isOpen={openSections.dakuten}
         onToggle={() => toggleSection("dakuten")}
+        sectionHeaderHeight={sectionHeaderHeight}
       >
         <KanaGrid data={dakutenKatakana} columns={5} />
       </AccordionSection>
@@ -353,6 +364,7 @@ export function KatakanaTable() {
         title="Handakuten (゜) - P-sounds"
         isOpen={openSections.handakuten}
         onToggle={() => toggleSection("handakuten")}
+        sectionHeaderHeight={sectionHeaderHeight}
       >
         <KanaGrid data={handakutenKatakana} columns={5} />
       </AccordionSection>
@@ -361,6 +373,7 @@ export function KatakanaTable() {
         title="Combo Sounds (キャ, シャ...)"
         isOpen={openSections.combo}
         onToggle={() => toggleSection("combo")}
+        sectionHeaderHeight={sectionHeaderHeight}
       >
         <KanaGrid data={comboKatakana} columns={3} />
       </AccordionSection>
@@ -369,6 +382,7 @@ export function KatakanaTable() {
         title="Extended (Foreign Sounds)"
         isOpen={openSections.extended}
         onToggle={() => toggleSection("extended")}
+        sectionHeaderHeight={sectionHeaderHeight}
       >
         <KanaGrid data={extendedKatakana} columns={4} />
       </AccordionSection>
