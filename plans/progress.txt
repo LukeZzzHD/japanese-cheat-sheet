@@ -1,0 +1,394 @@
+# Japanese Cheat Sheet - Progress Log
+
+## Project Start
+- Date: 2026-02-05
+- Total Images: 63 HEIC files (IMG_7492 - IMG_7555, note: IMG_7516 missing)
+- Target Level: N4 (Elementary)
+- Source: Mixed materials (textbook + class notes)
+
+---
+
+## Phase Log
+
+### Phase 0: Setup & Image Conversion
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created tasks.json with all 12 phases
+- Created iteration-prompt.md for workflow continuation
+- Created progress.txt (this file)
+- Created extracted-content.md structure
+- Converted all 63 HEIC images to PNG in /images-converted/
+- Confirmed IMG_7516 is missing (as noted in plan)
+
+---
+
+### Phase 1: Content Extraction - Images 1-15
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Target images: IMG_7492 - IMG_7506 (15 images)
+Notes:
+- Successfully read and analyzed all 15 images
+- Images contain handwritten class notes and textbook materials
+- Content found includes:
+  - Frequency adverbs (itsumo, yoku, tokidoki, amari, zenzen)
+  - Position words (ue, shita, hidari, migi)
+  - Time expressions (gozen, gogo, mainichi, goro, gurai)
+  - Food vocabulary (gohan, yasai, niku, asagohan)
+  - Common adjectives with negative forms (oishii, chiisai, atsui, samui)
+  - Shopping vocabulary (fuku, koukan, reshiito, saizu)
+  - 13 common verbs in -masu form
+  - Particle usage examples (wa, o, de, ni, mo, ga, no)
+  - Grammar patterns: basic sentence structure, verb conjugation, self-introduction
+  - Common expressions (sumimasen, arigatou, konnichiwa, etc.)
+  - Example sentences with translations
+- Updated extracted-content.md with all findings organized by category
+
+---
+
+### Phase 2: Content Extraction - Images 16-30
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Target images: IMG_7507 - IMG_7521 (14 images, skipping missing IMG_7516)
+Notes:
+- Successfully read and analyzed all 14 images
+- Images contain textbook pages with comprehensive vocabulary tables
+- Major content additions:
+  - Complete number system (1-10, tens, hundreds, thousands, ten-thousands)
+  - Number sound changes documented (sanbyaku, roppyaku, happyaku, sanzen, hassen)
+  - Full clock time vocabulary (1:00-12:00)
+  - Time expressions (asa, hiru, yoru, han, fun/pun)
+  - Duration vocabulary (ichijikan, ichinichi, isshuukan, ikkagetsu, ichinen)
+  - Complete calendar vocabulary:
+    - Days of the month (1st-31st with irregular readings)
+    - All 12 months (ichigatsu-juunigatsu)
+    - Relative time (yesterday/today/tomorrow, last/this/next week/month/year)
+  - Seasons (haru, natsu, aki, fuyu)
+  - Extended position words (mae, ushiro, chikaku, tonari, soto, naka, yoko)
+  - Quantity words (takusan, sukoshi, chotto)
+  - 18 い-adjectives with negative forms
+  - 7 な-adjectives
+  - Clothing vocabulary (fuku, youfuku, kimono, yukata, coat, jacket)
+  - Traditional culture (ikebana, sadou, bonsai, origami, haiku, kabuki)
+  - Daily routine verbs (okimasu, nemasu, ofuro, shawaa, ha o migakimasu, etc.)
+  - Activity verbs with を/します pattern (benkyou, shigoto, undou, ryouri, etc.)
+  - Communication verbs (denwa, meeru, intaanetto, oshaberi)
+  - Family vocabulary (ojiisan, obaasan)
+  - 16 new katakana words documented
+  - New grammar pattern: Time expression with に (ni)
+  - New grammar pattern: Activity pattern with を します
+- Updated extracted-content.md with all new content
+
+---
+
+### Phase 3: Content Extraction - Images 31-45
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Target images: IMG_7522 - IMG_7536 (15 images)
+Notes:
+- Successfully read and analyzed all 15 images
+- Images contain textbook pages focused on self-introduction, greetings, and social situations
+- Major content additions:
+  - Taste/temperature adjectives (takai, yasui, hayai, osoi, karai, suppai, amai, tsumetai, atatakai, ii/yoi, warui)
+  - Complete greetings section:
+    - Morning/afternoon/evening greetings (ohayou, konnichiwa, konbanwa)
+    - Work-related expressions (otsukaresama deshita)
+    - Farewell expressions (sayounara, jaa mata)
+  - Polite expressions expanded (shitsurei shimasu, osaki ni shitsurei shimasu)
+  - Classroom phrases (kiite/kaite/yonde/mite kudasai, mou ichido)
+  - Self-introduction dialogue patterns (hajimemashite, onamae wa, douzo yoroshiku)
+  - Where are you from pattern (dochira kara, soo desu ka)
+  - Language ability pattern (dekimasu/dekimasen, sukoshi dekimasu, benkyou-chuu desu)
+  - Complete family vocabulary:
+    - Own family (humble): chichi, haha, ani, ane, otouto, imouto, otto, tsuma, kodomo
+    - Others' family (polite): otousan, okaasan, oniisan, oneesan, etc.
+  - Counting people (hitori, futari, san-nin...)
+  - Age vocabulary (nan-sai, ~sai, oikutsu desu ka)
+  - Occupations (kyoushi, gakusei, kaishain, koumuin, enjinia, shufu)
+  - Countries and languages (nihon/nihongo, chuugoku/chuugokugo, etc.)
+  - Living location pattern (~ni sundeimasu)
+  - Family size pattern (kazoku wa ~nin desu)
+  - New katakana: エンジニア, ジェスチャーゲーム
+  - New particle: から (kara) - from
+  - Exception note: いい → よくない (irregular adjective)
+- Updated extracted-content.md - now 723 lines with comprehensive content
+
+---
+
+### Phase 4: Content Extraction - Images 46-63
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Target images: IMG_7537 - IMG_7555 (19 images)
+Notes:
+- Successfully read and analyzed all 19 images
+- Images contain textbook pages about food preferences, daily schedule, hobbies, and celebrations
+- Major content additions:
+  - Extended food vocabulary: さかな, たまご, パン, みそしる, そば, うどん, すし, カレー, ハンバーガー, くだもの
+  - Drinks section: みず, おちゃ, コーヒー, ジュース, ビール, ぎゅうにゅう
+  - Days of the week: げつようび through にちようび
+  - Hobbies vocabulary: しゅみ, えいが, おんがく, りょこう, どくしょ, しゃしん
+  - Sports & Activities: サッカー, やきゅう, テニス, およぎます, うたいます, あそびます
+  - Music genres: ピアノ, ギター, ロック, クラシック, ジャズ, アニメ
+  - Places: がっこう, びょういん, レストラン, カラオケ, コンサート
+  - Counting items (hitotsu through too)
+  - Meal expressions: いただきます, ごちそうさま
+  - Restaurant expressions: いらっしゃいませ, ordering patterns
+  - Celebration expressions: おめでとう, たんじょうび おめでとう, がんばって
+  - New verbs: あいます, あそびます, およぎます, うたいます, とります, すすめます
+  - Grammar patterns: preference (すきですか), invitation (さそい), schedule, opinions, after (~のあとで)
+  - 35 new katakana words documented
+  - 30+ new example sentences added
+- Created comprehensive topic outline for web app structure
+- CONTENT EXTRACTION COMPLETE - All 63 images processed
+
+---
+
+### CONTENT EXTRACTION SUMMARY (Phases 1-4)
+Total images processed: 62 (63 minus missing IMG_7516)
+Extracted content includes:
+- Complete number system (1 to 1,000,000+)
+- Full time vocabulary (hours, days, months, years, seasons)
+- Days of the week
+- 100+ vocabulary words across categories
+- 35+ katakana loan words
+- 27+ い-adjectives with negative forms
+- 7+ な-adjectives
+- 25+ verbs in various forms
+- 9 particles with examples
+- 15+ grammar patterns
+- 50+ example sentences
+- Complete expressions for: greetings, meals, restaurants, classroom, celebrations
+- Family vocabulary (own vs. others')
+- Occupations, countries, traditional culture
+
+---
+
+### Phase 5: Build Hiragana & Katakana Tables
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created /components directory
+- Created HiraganaTable.tsx with:
+  - Basic hiragana (あ-ん) - 46 characters
+  - Dakuten variations (が, ざ, だ, ば rows) - 20 characters
+  - Handakuten variations (ぱ row) - 5 characters
+  - Combo sounds (きゃ, しゃ, etc.) - 33 combinations
+  - Accordion-style collapsible sections for mobile
+  - Romaji shown below each character
+- Created KatakanaTable.tsx with:
+  - Basic katakana (ア-ン) - 46 characters
+  - Dakuten variations (ガ, ザ, ダ, バ rows) - 20 characters
+  - Handakuten variations (パ row) - 5 characters
+  - Combo sounds (キャ, シャ, etc.) - 33 combinations
+  - Extended foreign sounds (ファ, ティ, ウィ, ヴ, etc.) - 15 characters
+  - Accordion-style collapsible sections for mobile
+  - Romaji shown below each character
+- Updated globals.css with Japanese font family:
+  - -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif
+- Updated layout.tsx with proper metadata and viewport settings
+- Updated page.tsx to display both kana tables
+- Build verified successfully with Next.js 16.1.6
+
+---
+
+### Phase 6: Build Particle Guide
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created ParticleGuide.tsx component with accordion-style layout
+- Documented 12 particles with full explanations:
+  - は (wa) - Topic marker
+  - が (ga) - Subject marker
+  - を (o) - Object marker
+  - に (ni) - Direction/time/location
+  - で (de) - Location of action/means
+  - へ (e) - Direction
+  - と (to) - With/and
+  - も (mo) - Also/too
+  - の (no) - Possessive
+  - から (kara) - From
+  - まで (made) - Until/to
+  - より (yori) - Than (comparison)
+- Each particle includes:
+  - Romaji pronunciation
+  - Usage description
+  - 2-3 example sentences with romaji and English translation
+  - Important notes and exception cases
+- Highlighted notes about pronunciation differences (は→wa, を→o, へ→e)
+- Added comparison notes (に vs で, から vs まで patterns)
+- Mobile-optimized with accordion sections for easy navigation
+- Updated page.tsx to include ParticleGuide component
+- Build verified successfully with Next.js 16.1.6
+
+---
+
+### Phase 7: Build Sentence Structure Section
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created SentenceStructure.tsx component with accordion-style layout
+- Documented 12 sentence patterns with examples:
+  1. Basic Word Order (SOV) - Subject-Object-Verb structure
+  2. です (desu) - Copula patterns for "is/am/are"
+  3. Verb Conjugation - -ます form (positive, negative, past, past negative)
+  4. い-Adjective Conjugation - With いい/よくない exception noted
+  5. な-Adjective Conjugation - Including な before nouns
+  6. Self-Introduction - Full じこしょうかい pattern
+  7. Ability Pattern - できます/できません with が particle
+  8. Likes & Dislikes - すき/きらい patterns
+  9. Time Expressions - に particle with specific times
+  10. Location of Action - で particle usage
+  11. Making Invitations - ～ましょう patterns
+  12. Asking Questions - Question words reference
+- Each pattern includes:
+  - Description of usage
+  - Structure formula (where applicable)
+  - Multiple example sentences with romaji and English
+  - Important notes and exceptions
+- Updated page.tsx to include SentenceStructure component
+- Build verified successfully with Next.js 16.1.6
+
+---
+
+### Phase 8: Build Vocabulary Sections
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created VocabularySection.tsx component with accordion-style layout
+- Organized vocabulary into 11 main categories:
+  1. Numbers (かず) - Basic 1-10, Tens, Hundreds, Thousands, Counting People, Counting Items
+  2. Time (じかん) - Clock hours, Time words, Time of day, Days of week, Months, Relative time, Seasons
+  3. Food & Drinks (たべもの・のみもの) - Basic foods, Japanese dishes, Meals, Drinks
+  4. Family (かぞく) - Own family (humble), Others' family (polite)
+  5. Occupations (しごと) - Jobs and work-related vocabulary
+  6. Places (ばしょ) - Common places, Position words
+  7. Hobbies & Sports (しゅみ・スポーツ) - Hobbies, Sports, Music, Traditional culture
+  8. Adjectives (けいようし) - い-adjectives (basic, feelings, price/speed/taste), Irregular いい, な-adjectives
+  9. Common Verbs (どうし) - Basic verbs, Daily routine, Activities (~を します), Other verbs
+  10. Frequency & Quantity (ひんど) - Frequency adverbs, Quantity words
+  11. Countries & Languages (くに・ことば) - Countries and their languages
+- Each vocabulary card shows: Japanese (kana), romaji, English meaning
+- Special notes highlighted for sound changes and irregular forms
+- Subcategories organized within each main category
+- Mobile-optimized card layout with consistent styling
+- Updated page.tsx to include VocabularySection component
+- Build verified successfully with Next.js 16.1.6
+
+---
+
+### Phase 9: Build Grammar Reference
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created GrammarSection.tsx component with accordion-style layout
+- Organized 8 expression categories:
+  1. Greetings (あいさつ) - morning/afternoon/evening/farewell expressions
+  2. Polite Expressions (ていねいな ひょうげん) - thank you, excuse me, etc.
+  3. Introductions (じこしょうかい) - first meeting phrases
+  4. Meal Expressions (しょくじの ことば) - itadakimasu, gochisousama
+  5. Restaurant Expressions (レストランの ことば) - ordering, paying
+  6. Classroom Phrases (きょうしつの ことば) - teacher/student interactions
+  7. Celebration & Encouragement (おいわいの ことば) - congratulations, good luck
+  8. Common Responses (へんじ) - yes/no, agreeing, declining
+- Each expression includes: Japanese, romaji, English translation, usage context
+- Mobile-optimized card layout consistent with other components
+- Updated page.tsx to include GrammarSection component
+- Build verified successfully with Next.js 16.1.6
+
+Note: Verb forms and adjective conjugations already covered in SentenceStructure.tsx,
+so GrammarSection focuses on common expressions not yet documented.
+
+---
+
+### Phase 10: Build Main App Layout
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Created ThemeProvider.tsx for theme state management with React Context
+- Created ThemeToggle.tsx component with 3-way toggle: Light → Dark → System
+- Created Navigation.tsx with:
+  - Mobile: hamburger menu with dropdown navigation
+  - Desktop: horizontal navigation buttons
+  - Smooth scroll to section functionality
+- Updated globals.css with class-based dark mode support (.dark class)
+- Updated layout.tsx with:
+  - ThemeProvider wrapper
+  - Inline script to prevent flash of unstyled content (FOUC)
+  - suppressHydrationWarning for theme hydration
+- Updated page.tsx with:
+  - Sticky header with backdrop blur
+  - Section IDs for navigation anchoring (scroll-mt-20)
+  - Navigation and ThemeToggle components
+  - Improved footer with encouragement message
+- Tested on mobile viewport (375x812 - iPhone):
+  - Menu button shows/hides navigation dropdown
+  - Theme toggle cycles correctly
+  - Section jumping works with smooth scroll
+  - Dark mode applies correctly
+- Build verified successfully with Next.js 16.1.6
+
+---
+
+### Phase 11: Final Polish & Review
+Status: COMPLETED
+Started: 2026-02-05
+Completed: 2026-02-05
+Notes:
+- Fixed ESLint errors in ThemeProvider.tsx and ThemeToggle.tsx
+  - Refactored to use useSyncExternalStore instead of useState+useEffect pattern
+  - Eliminated "setState in effect" warnings
+- Set up Vitest testing framework
+  - Installed vitest, @testing-library/react, @testing-library/jest-dom, jsdom
+  - Created vitest.config.ts with proper React and path alias support
+  - Created vitest.setup.ts with jest-dom matchers and mocks
+- Created component tests (15 total, all passing):
+  - HiraganaTable.test.tsx - 5 tests (rendering, accordion behavior)
+  - KatakanaTable.test.tsx - 4 tests (rendering, accordion behavior)
+  - ParticleGuide.test.tsx - 3 tests (rendering, particle display)
+  - VocabularySection.test.tsx - 3 tests (rendering, categories)
+- Verified build compiles successfully with Next.js 16.1.6
+- Verified ESLint passes with no errors
+
+---
+
+## PROJECT COMPLETE
+
+All 12 phases completed successfully.
+
+### Final Project Summary:
+- **Tech Stack**: Next.js 16, Tailwind CSS 4, TypeScript, Vitest
+- **Components Created**: 9 React components
+  - HiraganaTable.tsx - Full hiragana chart with dakuten/handakuten/combos
+  - KatakanaTable.tsx - Full katakana chart including foreign sounds
+  - ParticleGuide.tsx - 12 particles with usage examples
+  - SentenceStructure.tsx - 12 grammar patterns with examples
+  - VocabularySection.tsx - 11 vocabulary categories with subcategories
+  - GrammarSection.tsx - 8 expression categories
+  - Navigation.tsx - Mobile hamburger menu + desktop nav
+  - ThemeProvider.tsx - Dark/Light/System theme management
+  - ThemeToggle.tsx - Theme switcher button
+- **Features**:
+  - Mobile-first responsive design
+  - Dark mode support with system preference detection
+  - Accordion-style collapsible sections
+  - Smooth scroll navigation
+  - Clean, minimal UI with Japanese font support
+- **Content Coverage**:
+  - Complete hiragana & katakana tables
+  - 100+ vocabulary words across 11 categories
+  - 12 particles with examples
+  - 12 sentence structure patterns
+  - 8 expression categories for common situations
+- **Testing**: 15 component tests (all passing)
+- **Quality**: ESLint clean, TypeScript strict mode

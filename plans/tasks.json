@@ -1,0 +1,152 @@
+{
+  "projectName": "Japanese Cheat Sheet",
+  "currentPhase": 11,
+  "totalPhases": 12,
+  "phases": [
+    {
+      "id": 0,
+      "name": "Setup & Image Conversion",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create /plans directory structure", "status": "completed" },
+        { "id": 2, "task": "Convert all 63 HEIC images to PNG", "status": "completed" },
+        { "id": 3, "task": "Create tasks.json", "status": "completed" },
+        { "id": 4, "task": "Create iteration-prompt.md", "status": "completed" },
+        { "id": 5, "task": "Create progress.txt", "status": "completed" }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Content Extraction - Images 1-15",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Read images IMG_7492-IMG_7506", "status": "completed" },
+        { "id": 2, "task": "Document hiragana/katakana", "status": "completed" },
+        { "id": 3, "task": "Document vocabulary", "status": "completed" },
+        { "id": 4, "task": "Document grammar patterns", "status": "completed" },
+        { "id": 5, "task": "Log in extracted-content.md", "status": "completed" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Content Extraction - Images 16-30",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Read images IMG_7507-IMG_7521 (skip missing IMG_7516)", "status": "completed" },
+        { "id": 2, "task": "Add new kana content", "status": "completed" },
+        { "id": 3, "task": "Add vocabulary", "status": "completed" },
+        { "id": 4, "task": "Add grammar patterns", "status": "completed" },
+        { "id": 5, "task": "Update extracted-content.md", "status": "completed" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Content Extraction - Images 31-45",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Read images IMG_7522-IMG_7536", "status": "completed" },
+        { "id": 2, "task": "Add new content", "status": "completed" },
+        { "id": 3, "task": "Categorize by topic", "status": "completed" },
+        { "id": 4, "task": "Identify sentence patterns", "status": "completed" },
+        { "id": 5, "task": "Update extracted-content.md", "status": "completed" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Content Extraction - Images 46-63",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Read images IMG_7537-IMG_7555", "status": "completed" },
+        { "id": 2, "task": "Finalize content", "status": "completed" },
+        { "id": 3, "task": "Organize by topic", "status": "completed" },
+        { "id": 4, "task": "Create topic outline", "status": "completed" },
+        { "id": 5, "task": "Complete extracted-content.md", "status": "completed" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Build Hiragana & Katakana Tables",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create HiraganaTable.tsx", "status": "completed" },
+        { "id": 2, "task": "Create KatakanaTable.tsx", "status": "completed" },
+        { "id": 3, "task": "Include all sounds with romaji", "status": "completed" },
+        { "id": 4, "task": "Add dakuten/handakuten variations", "status": "completed" },
+        { "id": 5, "task": "Style for mobile readability", "status": "completed" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Build Particle Guide",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create ParticleGuide.tsx", "status": "completed" },
+        { "id": 2, "task": "Document all particles", "status": "completed" },
+        { "id": 3, "task": "Include usage rules", "status": "completed" },
+        { "id": 4, "task": "Add exception cases", "status": "completed" },
+        { "id": 5, "task": "Mobile-optimized layout", "status": "completed" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Build Sentence Structure Section",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create SentenceStructure.tsx", "status": "completed" },
+        { "id": 2, "task": "Document SOV word order", "status": "completed" },
+        { "id": 3, "task": "Explain verb conjugation", "status": "completed" },
+        { "id": 4, "task": "Include example sentences", "status": "completed" },
+        { "id": 5, "task": "Add practice patterns", "status": "completed" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Build Vocabulary Sections",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create vocabulary components", "status": "completed" },
+        { "id": 2, "task": "Group by categories", "status": "completed" },
+        { "id": 3, "task": "Include romaji and kana", "status": "completed" },
+        { "id": 4, "task": "Add example sentences", "status": "completed" },
+        { "id": 5, "task": "Mobile card layout", "status": "completed" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Build Grammar Reference",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create GrammarSection.tsx", "status": "completed" },
+        { "id": 2, "task": "Document verb forms", "status": "completed" },
+        { "id": 3, "task": "Document adjective conjugations", "status": "completed" },
+        { "id": 4, "task": "Include pattern explanations", "status": "completed" },
+        { "id": 5, "task": "Add example sentences", "status": "completed" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Build Main App Layout",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Create navigation structure", "status": "completed" },
+        { "id": 2, "task": "Implement dark mode toggle", "status": "completed" },
+        { "id": 3, "task": "Create clean page layout", "status": "completed" },
+        { "id": 4, "task": "Ensure mobile responsiveness", "status": "completed" },
+        { "id": 5, "task": "Test various screen sizes", "status": "completed" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Final Polish & Review",
+      "status": "completed",
+      "steps": [
+        { "id": 1, "task": "Review content accuracy", "status": "completed" },
+        { "id": 2, "task": "Ensure consistent formatting", "status": "completed" },
+        { "id": 3, "task": "Test mobile experience", "status": "completed" },
+        { "id": 4, "task": "Run component tests with Vitest", "status": "completed" },
+        { "id": 5, "task": "Add missing content", "status": "completed" },
+        { "id": 6, "task": "Mark project complete", "status": "completed" }
+      ]
+    }
+  ]
+}
