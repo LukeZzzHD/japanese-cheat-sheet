@@ -469,34 +469,39 @@ function AccordionSection({
 }: AccordionSectionProps) {
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-700">
-      <button
-        onClick={onToggle}
-        className="flex w-full items-center justify-between py-3 text-left"
+      <div
+        className="sticky z-20 bg-white dark:bg-zinc-900"
+        style={{ top: 'calc(var(--navbar-height) + var(--section-header-height))' }}
       >
-        <div className="flex items-center gap-2">
-          <span className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
-            {title}
-          </span>
-          <span className="text-sm text-zinc-500 dark:text-zinc-400">
-            {subtitle}
-          </span>
-        </div>
-        <svg
-          className={`h-5 w-5 text-zinc-500 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+        <button
+          onClick={onToggle}
+          className="flex w-full items-center justify-between py-3 text-left"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </button>
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-medium text-zinc-900 dark:text-zinc-100">
+              {title}
+            </span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">
+              {subtitle}
+            </span>
+          </div>
+          <svg
+            className={`h-5 w-5 text-zinc-500 transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+      </div>
       {isOpen && <div className="pb-4">{children}</div>}
     </div>
   );
@@ -550,36 +555,41 @@ export function GrammarSection() {
   };
 
   return (
-    <div className="rounded-xl bg-white p-4 shadow-sm dark:bg-zinc-900">
-      <h2 className="mb-4 text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-        ひょうげん (Common Expressions)
-      </h2>
-
-      <p className="mb-4 text-sm text-zinc-600 dark:text-zinc-400">
-        Essential phrases for everyday situations. Each includes romaji
-        pronunciation and usage context.
-      </p>
-
-      {expressionsData.map((category) => (
-        <AccordionSection
-          key={category.id}
-          title={category.title}
-          subtitle={`(${category.titleJapanese})`}
-          isOpen={openSections[category.id] || false}
-          onToggle={() => toggleSection(category.id)}
-        >
-          {category.description && (
-            <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">
-              {category.description}
-            </p>
-          )}
-          <div className="grid gap-2 lg:grid-cols-2">
-            {category.expressions.map((expression, index) => (
-              <ExpressionCard key={index} expression={expression} />
-            ))}
-          </div>
-        </AccordionSection>
-      ))}
+    <div className="rounded-xl bg-white shadow-sm dark:bg-zinc-900">
+      <div
+        className="sticky z-30 rounded-t-xl bg-white px-4 pt-4 dark:bg-zinc-900"
+        style={{ top: 'var(--navbar-height)' }}
+      >
+        <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
+          ひょうげん (Common Expressions)
+        </h2>
+        <p className="pb-2 text-sm text-zinc-600 dark:text-zinc-400">
+          Essential phrases for everyday situations. Each includes romaji
+          pronunciation and usage context.
+        </p>
+      </div>
+      <div className="px-4 pb-4">
+        {expressionsData.map((category) => (
+          <AccordionSection
+            key={category.id}
+            title={category.title}
+            subtitle={`(${category.titleJapanese})`}
+            isOpen={openSections[category.id] || false}
+            onToggle={() => toggleSection(category.id)}
+          >
+            {category.description && (
+              <p className="mb-3 text-sm text-zinc-600 dark:text-zinc-400">
+                {category.description}
+              </p>
+            )}
+            <div className="grid gap-2 lg:grid-cols-2">
+              {category.expressions.map((expression, index) => (
+                <ExpressionCard key={index} expression={expression} />
+              ))}
+            </div>
+          </AccordionSection>
+        ))}
+      </div>
     </div>
   );
 }

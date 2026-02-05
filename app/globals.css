@@ -7,6 +7,10 @@
   --foreground: #171717;
   --card-bg: #ffffff;
   --border-color: #e4e4e7;
+  --navbar-height: 60px;
+  --section-header-height: 48px;
+  --subsection-header-height: 48px;
+  --subtitle-height: 32px;
 }
 
 .dark {

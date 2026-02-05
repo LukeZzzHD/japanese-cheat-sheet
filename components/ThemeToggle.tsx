@@ -14,44 +14,25 @@ function useMounted() {
 }
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const mounted = useMounted();
 
   if (!mounted) {
     return (
-      <div className="h-8 w-16 rounded-lg border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800" />
+      <div className="h-9 w-9 rounded-lg border border-zinc-200 bg-white dark:border-zinc-700 dark:bg-zinc-800" />
     );
   }
 
   const cycleTheme = () => {
     if (theme === 'light') {
       setTheme('dark');
-    } else if (theme === 'dark') {
-      setTheme('system');
     } else {
       setTheme('light');
     }
   };
 
   const getIcon = () => {
-    if (theme === 'system') {
-      return (
-        <svg
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      );
-    }
-    if (resolvedTheme === 'dark') {
+    if (theme === 'dark') {
       return (
         <svg
           className="h-5 w-5"
@@ -85,20 +66,13 @@ export function ThemeToggle() {
     );
   };
 
-  const getLabel = () => {
-    if (theme === 'system') return 'System';
-    if (theme === 'dark') return 'Dark';
-    return 'Light';
-  };
-
   return (
     <button
       onClick={cycleTheme}
-      className="flex items-center gap-1.5 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 text-sm text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
-      aria-label={`Current theme: ${getLabel()}. Click to change.`}
+      className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white p-2 text-zinc-700 transition-colors hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
+      aria-label={`Toggle theme. Current: ${theme === 'dark' ? 'dark' : 'light'}`}
     >
       {getIcon()}
-      <span className="text-xs">{getLabel()}</span>
     </button>
   );
 }
