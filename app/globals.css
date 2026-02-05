@@ -8,9 +8,31 @@
   --card-bg: #ffffff;
   --border-color: #e4e4e7;
   --navbar-height: 60px;
-  --section-header-height: 48px;
-  --subsection-header-height: 48px;
-  --subtitle-height: 32px;
+  /* Mobile-first: larger heights to accommodate text wrapping on narrow screens */
+  /* Main section header includes title + description which can wrap to 4-5 lines */
+  --section-header-height: 120px;
+  /* Accordion subsection header includes title + subtitle which can wrap */
+  --subsection-header-height: 80px;
+  /* Subcategory title header */
+  --subtitle-height: 48px;
+}
+
+/* Desktop: smaller heights when text doesn't wrap */
+@media (min-width: 640px) {
+  :root {
+    --section-header-height: 72px;
+    --subsection-header-height: 56px;
+    --subtitle-height: 36px;
+  }
+}
+
+/* Large screens: minimal heights */
+@media (min-width: 1024px) {
+  :root {
+    --section-header-height: 64px;
+    --subsection-header-height: 48px;
+    --subtitle-height: 32px;
+  }
 }
 
 .dark {
