@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b border-zinc-200 bg-zinc-50/95 px-4 py-3 backdrop-blur-sm dark:border-zinc-800 dark:bg-zinc-950/95">
-        <div className="mx-auto flex max-w-lg items-center justify-between lg:max-w-4xl xl:max-w-6xl">
+        <div className="relative mx-auto flex max-w-lg items-center justify-between lg:max-w-4xl xl:max-w-6xl">
           <div>
             <h1 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
               Japanese Cheat Sheet
@@ -20,7 +20,7 @@ export default function Home() {
               にほんご チートシート - N4
             </p>
           </div>
-          <div className="relative flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <Navigation />
             <ThemeToggle />
           </div>
